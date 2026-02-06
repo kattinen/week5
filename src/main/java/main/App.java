@@ -7,6 +7,7 @@
 
 package main;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App 
@@ -48,7 +49,11 @@ public class App
                     case 2:
                         String name = factory.getName();
                         System.out.println("Tehtaasta " + name + " löytyy seuraavat koneet:");
-                        factory.getMachines();
+                        ArrayList<Machine> listMachines = factory.getMachines();
+                        for(Machine machineInList : listMachines) {
+                            String machineData = machineInList.getMachineDetails();
+                            System.out.println(machineData);
+                        }
                         break;
                     case 0:
                         System.out.println("Kiitos ohjelman käytöstä.");

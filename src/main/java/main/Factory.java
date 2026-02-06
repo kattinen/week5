@@ -22,11 +22,8 @@ public class Factory {
         machines.add(machine);
     }
 
-    public void getMachines() {
-        for (Machine machine : machines) {
-            String machineData = machine.getMachineDetails();
-            System.out.println(machineData);
-        }
+    public ArrayList<Machine> getMachines() {
+        return this.machines;
     }
 
     public String getName() {
